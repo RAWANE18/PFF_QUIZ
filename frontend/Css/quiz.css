@@ -4,6 +4,7 @@
 }
 body {
   background-color: #ebe2ef;
+  font-family: "Quicksand", sans-serif;
 }
 header {
   position: fixed;
@@ -14,14 +15,15 @@ header {
     rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
 }
 
+/* j'ai enlever width 100% car il a fait un débordement dans la page */
 .quiz-description {
   margin-top: 50px;
-  background-image: url(../res/ghdfh.jpg);
+  background-image: url(../res/bg1.png);
   background-size: cover;
   background-position: center;
   background-size: 100% 100%;
   background-repeat: no-repeat;
-  width: 100%;
+
   height: 60vh;
   padding: 20px;
   padding-top: 40px;
@@ -83,11 +85,18 @@ header {
   color: #990077;
   text-decoration: none;
 }
+/* essaye de changer le nom de la class par quiz-ctn par exemple car comme ça ce nom de la classe ne représente pas les items 
+
+
+*/
+
 .container {
   width: 350px;
   height: 350px;
   border-radius: 2rem;
   perspective: 700px;
+  margin-top: 40px;
+  margin-bottom: 40px;
 }
 .quiz-card {
   width: 100%;
@@ -132,27 +141,21 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 4rem;
+  gap: 1rem;
 }
+.back button {
+  margin-top: 50px;
+}
+/* J'ai enlever le gap 5rem et je l'ai remplacer par 40px car 5rem c'est trop pour les petits écrans*/
 .quiz {
   display: grid;
-  gap: 5rem;
+  gap: 40px;
   grid-template-columns: 1fr 1fr 1fr;
-  padding: 150px 50px 150px 150px;
+  margin-top: 20px;
+  margin-bottom: 60px;
+  padding-left: 90px;
 }
 
-.btn {
-  margin-top: 20px;
-  border-radius: 35px;
-  border-radius: 35px;
-  font-size: 18px;
-  color: #fff;
-  width: 150px;
-  background: #69275c;
-  font-weight: 600;
-  padding: 10px 10px;
-  border: 1px solid #69275c;
-}
 footer {
   background-color: #333;
   color: #fff;
@@ -192,6 +195,97 @@ footer {
   text-decoration: underline;
   color: blueviolet;
 }
+.button-82-pushable {
+  position: relative;
+  border: none;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+  outline-offset: 4px;
+  transition: filter 250ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-82-shadow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  background: hsl(0deg 0% 0% / 0.25);
+  will-change: transform;
+  transform: translateY(2px);
+  transition: transform 600ms cubic-bezier(0.3, 0.7, 0.4, 1);
+}
+
+.button-82-edge {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  background: linear-gradient(
+    to left,
+    hsl(305, 87%, 18%) 0%,
+    hsl(300, 68%, 22%) 8%,
+    hsl(301, 87%, 40%) 92%,
+    hsl(310, 98%, 16%) 100%
+  );
+}
+
+.button-82-front {
+  display: block;
+  position: relative;
+  padding: 12px 27px;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  color: white;
+  background: #69275c;
+  will-change: transform;
+  transform: translateY(-4px);
+  transition: transform 600ms cubic-bezier(0.3, 0.7, 0.4, 1);
+}
+
+@media (min-width: 768px) {
+  .button-82-front {
+    font-size: 1.25rem;
+    padding: 12px 42px;
+  }
+}
+
+.button-82-pushable:hover {
+  filter: brightness(110%);
+  -webkit-filter: brightness(110%);
+}
+
+.button-82-pushable:hover .button-82-front {
+  transform: translateY(-6px);
+  transition: transform 250ms cubic-bezier(0.3, 0.7, 0.4, 1.5);
+}
+
+.button-82-pushable:active .button-82-front {
+  transform: translateY(-2px);
+  transition: transform 34ms;
+}
+
+.button-82-pushable:hover .button-82-shadow {
+  transform: translateY(4px);
+  transition: transform 250ms cubic-bezier(0.3, 0.7, 0.4, 1.5);
+}
+
+.button-82-pushable:active .button-82-shadow {
+  transform: translateY(1px);
+  transition: transform 34ms;
+}
+
+.button-82-pushable:focus:not(:focus-visible) {
+  outline: none;
+}
+
 ::selection {
   background-color: #762788;
   color: #fff;
