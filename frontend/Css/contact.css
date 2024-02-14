@@ -88,15 +88,7 @@
 .form-img img {
   max-width: 100%;
 }
-.btn,
-button,
-input {
-  border-radius: 35px;
-}
-.btn:hover,
-button:hover {
-  color: #97359c;
-}
+
 .contact form {
   margin: 30px 0;
 }
@@ -114,14 +106,52 @@ textarea {
   background: #fcfcfc;
 }
 
-.contact button {
+/* CSS */
+.button-72 {
+  margin: 0;
+
+  width: 300px;
+  align-items: center;
+  background-color: initial;
+  background-image: linear-gradient(
+    rgba(179, 132, 201, 0.84),
+    rgba(81, 24, 88, 0.84) 50%
+  );
+  border-radius: 42px;
+  border-width: 0;
+  box-shadow: rgba(57, 31, 91, 0.24) 0 2px 2px,
+    rgba(179, 132, 201, 0.4) 0 8px 12px;
+  color: #ffffff;
+  cursor: pointer;
+  display: flex;
+  font-family: Quicksand, sans-serif;
   font-size: 18px;
-  color: #fff;
-  width: 100%;
-  background: #69275c;
-  font-weight: 600;
-  padding: 14px 15px;
-  border: 1px solid #69275c;
+  font-weight: 700;
+  justify-content: center;
+  letter-spacing: 0.04em;
+  line-height: 16px;
+
+  padding: 18px 18px;
+  text-align: center;
+  text-decoration: none;
+  text-shadow: rgba(255, 255, 255, 0.4) 0 0 4px,
+    rgba(255, 255, 255, 0.2) 0 0 12px, rgba(57, 31, 91, 0.6) 1px 1px 4px,
+    rgba(57, 31, 91, 0.32) 4px 4px 16px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: baseline;
+}
+
+.button-72:hover {
+  background-image: linear-gradient(#b384c9, #611b70 50%);
+}
+
+@media (min-width: 768px) {
+  .button-72 {
+    font-size: 21px;
+    padding: 18px 34px;
+  }
 }
 ::selection {
   background-color: #762788;

@@ -68,10 +68,16 @@ body {
   background-color: #69275c;
   color: #fff;
   border-radius: 4px;
+
   font-weight: 500;
   width: 150px;
   margin-left: 150px;
   padding: 10px;
   cursor: pointer;
   display: none;
+}
+
+::selection {
+  background-color: #762788;
+  color: #fff;
 }

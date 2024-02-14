@@ -15,7 +15,6 @@ header {
     rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
 }
 
-/* j'ai enlever width 100% car il a fait un débordement dans la page */
 .quiz-description {
   margin-top: 50px;
   background-image: url(../res/bg1.png);
@@ -85,12 +84,8 @@ header {
   color: #990077;
   text-decoration: none;
 }
-/* essaye de changer le nom de la class par quiz-ctn par exemple car comme ça ce nom de la classe ne représente pas les items 
 
-
-*/
-
-.container {
+.quiz-ctn {
   width: 350px;
   height: 350px;
   border-radius: 2rem;
@@ -105,7 +100,7 @@ header {
   transition: transform 1500ms;
   transform-style: preserve-3d;
 }
-.container:hover > .quiz-card {
+.quiz-ctn:hover > .quiz-card {
   cursor: pointer;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
     rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
@@ -146,7 +141,7 @@ header {
 .back button {
   margin-top: 50px;
 }
-/* J'ai enlever le gap 5rem et je l'ai remplacer par 40px car 5rem c'est trop pour les petits écrans*/
+
 .quiz {
   display: grid;
   gap: 40px;
@@ -155,7 +150,19 @@ header {
   margin-bottom: 60px;
   padding-left: 90px;
 }
-
+.quiz-section h1 {
+  margin-top: 50px;
+  color: #8013a1;
+  letter-spacing: -0.3px;
+  font-size: 2.125rem;
+  font-weight: lighter;
+  text-align: center;
+  margin-bottom: 60px;
+}
+.quiz-section p {
+  text-align: center;
+  color: #691a71;
+}
 footer {
   background-color: #333;
   color: #fff;
@@ -289,10 +296,4 @@ footer {
 ::selection {
   background-color: #762788;
   color: #fff;
-}
-
-@media screen and (max-width: 1021px) {
-  .quiz-description {
-    width: 100%;
-  }
 }
