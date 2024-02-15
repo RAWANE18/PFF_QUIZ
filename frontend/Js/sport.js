@@ -36,3 +36,6 @@ const Qts = [
     option: ["Bumper", "Winglet", "Halo", "Spoiler"],
   },
 ];
+document.getElementById("view-answers-btn-sport").onclick = function () {
+  window.location.href = "sport.html";
+};

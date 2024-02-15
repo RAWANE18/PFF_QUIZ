@@ -5,6 +5,11 @@ var answerList = document.querySelector(".answer-list");
 var questionShow = document.querySelector(".question-text");
 var score = document.querySelector(".score");
 var page = document.querySelector(".page");
+var ctn = document.querySelector(".container");
+var endQuiz = document.querySelector(".end-quiz");
+var pourcentage = document.querySelector(".circulare-progress ");
+var pourcentageValue = document.querySelector(".progress-value");
+var note = document.querySelector(".text-note");
 var point = 0; // Le score du joueur
 var numpage = 1; // Le numéro de la page/question actuelle
 
@@ -46,10 +51,28 @@ for (let i = 0; i < answerList.children.length; i++) {
 }
 // Gestion du clic sur le bouton de navigation vers la prochaine question
 btn.addEventListener("click", () => {
-  if (numpage > 0 && numpage <= 5) {
+  if (numpage > 0 && numpage < 5) {
     showquestions(numpage);
     numpage++; // Incrémentation du numéro de la page
     page.textContent = numpage;
+  } else {
+    ctn.style.display = "none";
+    endQuiz.style.display = "block";
+    let progressValue = 0;
+    let speed = 20;
+    let progress = setInterval(() => {
+      progressValue++;
+      pourcentageValue.textContent = `${progressValue}%`;
+      pourcentage.style.background = `conic-gradient(#762788 ${
+        progressValue * 3.6
+      }deg,#b6b4b4 0deg)`;
+      if (progressValue == point) {
+        clearInterval(progress);
+      }
+    }, speed);
+    if (point < 50) {
+      note.textContent = "You can do better next time!😔";
+    }
   }
   // Réactivation des options de réponse pour la nouvelle question
   for (let j = 0; j < answer.length; j++) {

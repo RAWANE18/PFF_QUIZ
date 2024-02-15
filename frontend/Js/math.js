@@ -33,3 +33,6 @@ const Qts = [
     option: ["3", "4", "5", "6"],
   },
 ];
+document.getElementById("view-answers-btn-math").onclick = function () {
+  window.location.href = "math.html";
+};

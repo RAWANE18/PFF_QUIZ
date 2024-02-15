@@ -33,3 +33,6 @@ const Qts = [
     option: ["Homonym", "Palindrome", "Anagram", "Acronym"],
   },
 ];
+document.getElementById("view-answers-btn-langue").onclick = function () {
+  window.location.href = "langue.html";
+};

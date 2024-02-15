@@ -43,3 +43,6 @@ const Qts = [
     option: ["Palette", " Easel", "Canvas", "Brush"],
   },
 ];
+document.getElementById("view-answers-btn-art").onclick = function () {
+  window.location.href = "art.html";
+};

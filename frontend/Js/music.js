@@ -40,3 +40,6 @@ const Qts = [
     option: ["Justin Bieber", "Drake'", "Shawn Mendes", "The Weeknd"],
   },
 ];
+document.getElementById("view-answers-btn-music").onclick = function () {
+  window.location.href = "music.html";
+};

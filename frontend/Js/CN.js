@@ -52,3 +52,6 @@ const Qts = [
     ],
   },
 ];
+document.getElementById("view-answers-btn-CN").onclick = function () {
+  window.location.href = "CN.html";
+};
