@@ -22,7 +22,6 @@ header {
   background-position: center;
   background-size: 100% 100%;
   background-repeat: no-repeat;
-
   height: 60vh;
   padding: 20px;
   padding-top: 40px;
@@ -296,4 +295,141 @@ footer {
 ::selection {
   background-color: #762788;
   color: #fff;
+}
+@media screen and (min-width: 2315px) {
+  .quiz {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    padding-left: 15px;
+  }
+  .quiz-description h2 {
+    font-size: xx-larger;
+    font-weight: 500;
+  }
+  .quiz-description p {
+    font-size: x-large;
+  }
+  .list {
+    font-size: x-large;
+  }
+  .navlinks a {
+    font-size: x-large;
+  }
+  .quiz-section p {
+    font-size: x-large;
+  }
+  .quiz-section h1 {
+    font-size: xx-large;
+    font-weight: 500;
+  }
+  .footer-section p {
+    font-size: 1.3rem;
+  }
+  .footer-section h2 {
+    font-size: 1.9rem;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .quiz {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media screen and (max-width: 768px) {
+  .navlinks {
+    font-size: smaller;
+    width: 70%;
+    margin-left: 20px;
+  }
+  .quiz {
+    grid-template-columns: 1fr 1fr;
+    padding-left: 30px;
+  }
+  .quiz-ctn {
+    width: 300px;
+    height: 300px;
+  }
+  .front {
+    width: 300px;
+    height: 300px;
+  }
+  .back {
+    width: 300px;
+    height: 300px;
+  }
+  #photo {
+    width: 300px;
+    height: 300px;
+  }
+}
+@media screen and (max-width: 426px) {
+  .navlinks {
+    font-size: smaller;
+    width: 70%;
+    margin-left: 20px;
+  }
+  .quiz-description {
+    margin-top: 40px;
+  }
+  .quiz {
+    grid-template-columns: 1fr;
+  }
+  .quiz-description h2 {
+    font-size: 1.3rem;
+    font-weight: lighter;
+  }
+
+  .quiz-description p {
+    font-size: 0.7rem;
+  }
+  .list {
+    font-size: 0.7rem;
+  }
+  .quiz-section p {
+    font-size: small;
+  }
+  .quiz-section h1 {
+    font-size: large;
+    font-weight: 500;
+  }
+  .footer-section p {
+    font-size: 0.6rem;
+  }
+  .footer-section h2 {
+    font-size: 1rem;
+  }
+  .footer-section a {
+    font-size: 0.6rem;
+  }
+}
+@media screen and (max-width: 320px) {
+  .navlinks {
+    font-size: 0.7rem;
+    width: 70%;
+    margin-left: 20px;
+  }
+  .quiz-description h2 {
+    font-size: 1rem;
+    margin-bottom: 20px;
+  }
+  .quiz-description p {
+    font-size: 0.6rem;
+  }
+  .list {
+    font-size: 0.6rem;
+  }
+  .quiz-ctn {
+    width: 250px;
+    height: 250px;
+  }
+  .front {
+    width: 250px;
+    height: 250px;
+  }
+  .back {
+    width: 250px;
+    height: 250px;
+  }
+  #photo {
+    width: 250px;
+    height: 250px;
+  }
 }

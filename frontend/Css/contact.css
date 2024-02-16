@@ -157,3 +157,37 @@ textarea {
   background-color: #762788;
   color: #fff;
 }
+
+@media screen and (min-width: 2315px) {
+  .container {
+    max-width: 1500px;
+  }
+  .contact h1 {
+    font-size: 70px;
+    font-weight: 500;
+  }
+  .contact h2 {
+    font-size: 50px;
+    font-weight: 400;
+  }
+  .navlinks a {
+    font-size: x-large;
+  }
+  .contact form {
+    margin: 130px 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  .navlinks {
+    font-size: smaller;
+    width: 70%;
+    margin-left: 20px;
+  }
+}
+@media screen and (max-width: 320px) {
+  .navlinks {
+    font-size: 0.7rem;
+    width: 70%;
+    margin-left: 20px;
+  }
+}

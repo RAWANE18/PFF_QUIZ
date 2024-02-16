@@ -10,7 +10,6 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-
   margin: 0;
   height: 100vh;
 }
@@ -153,4 +152,49 @@ body {
 
 .button-82-pushable:focus:not(:focus-visible) {
   outline: none;
+}
+
+@media screen and (min-width: 2315px) {
+  .first {
+    margin-top: 22%;
+    font-size: 40px;
+  }
+  .navlinks a {
+    font-size: x-large;
+  }
+  .first h1 {
+    font-size: 80px;
+  }
+  button {
+    width: 200px;
+    height: 50px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .navlinks {
+    font-size: smaller;
+    width: 70%;
+    margin-left: 20px;
+  }
+  .first {
+    font-size: 13px;
+  }
+  button {
+    width: 80px;
+  }
+  .button-82-front {
+    font-size: 0.8rem;
+    padding: 10px;
+  }
+}
+@media screen and (max-width: 426px) {
+  .navlinks {
+    font-size: smaller;
+    width: 70%;
+    margin-left: 20px;
+  }
+  .first h1 {
+    font-size: 23px;
+  }
 }

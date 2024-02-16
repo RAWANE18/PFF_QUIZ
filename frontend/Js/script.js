@@ -60,16 +60,19 @@ btn.addEventListener("click", () => {
     endQuiz.style.display = "block";
     let progressValue = 0;
     let speed = 20;
-    let progress = setInterval(() => {
-      progressValue++;
-      pourcentageValue.textContent = `${progressValue}%`;
-      pourcentage.style.background = `conic-gradient(#762788 ${
-        progressValue * 3.6
-      }deg,#b6b4b4 0deg)`;
-      if (progressValue == point) {
-        clearInterval(progress);
-      }
-    }, speed);
+    if (point > 0) {
+      let progress = setInterval(() => {
+        progressValue++;
+        pourcentageValue.textContent = `${progressValue}%`;
+        pourcentage.style.background = `conic-gradient(#762788 ${
+          progressValue * 3.6
+        }deg,#b6b4b4 0deg)`;
+        if (progressValue == point) {
+          clearInterval(progress);
+        }
+      }, speed);
+    }
+
     if (point < 50) {
       note.textContent = "You can do better next time!😔";
     }
